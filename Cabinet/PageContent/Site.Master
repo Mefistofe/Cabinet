@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Cabinet.PageContent.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+    <head runat="server">
+        <title></title>
+
+        <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+        <script type="text/javascript" src="Site.Master.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="Site.Master.css">
+
+        <asp:ContentPlaceHolder ID="MasterHead" runat="server" />
+    </head>
+
+    <body>
+        <form id="masterForm" runat="server">
+            <div>
+                <asp:Button OnInit="RedirectToPageButton_Init" OnCommand="RedirectToPageButton_Click" CommandArgument="HomePage"    runat="server" />
+                <asp:Button OnInit="RedirectToPageButton_Init" OnCommand="RedirectToPageButton_Click" CommandArgument="AboutPage"   runat="server" />
+                <asp:Button OnInit="RedirectToPageButton_Init" OnCommand="RedirectToPageButton_Click" CommandArgument="ContactPage" runat="server" />
+                <asp:Button OnInit="RedirectToPageButton_Init" OnCommand="RedirectToPageButton_Click" CommandArgument="PricesPage"  runat="server" />
+            </div>
+
+            <asp:ContentPlaceHolder ID="MasterBody" runat="server" />
+        </form>
+    </body>
+</html>

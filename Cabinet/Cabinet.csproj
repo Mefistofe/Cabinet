@@ -43,6 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DatabaseEntities">
+      <HintPath>..\DatabaseEntities\bin\Debug\DatabaseEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DatabaseEntities\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\DatabaseEntities\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -67,19 +76,91 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PageContent\ContactPage\ContactPage.aspx" />
+    <Content Include="PageContent\ContactPage\ContactPage.css" />
+    <Content Include="PageContent\ContactPage\ContactPage.js" />
+    <Content Include="PageContent\PricesPage\PricesPage.aspx" />
+    <Content Include="PageContent\PricesPage\PricesPage.css" />
+    <Content Include="PageContent\PricesPage\PricesPage.js" />
+    <Content Include="PageContent\AboutPage\AboutPage.aspx" />
+    <Content Include="PageContent\AboutPage\AboutPage.css" />
+    <Content Include="PageContent\AboutPage\AboutPage.js" />
+    <Content Include="PageContent\HomePage\HomePage.aspx" />
+    <Content Include="PageContent\HomePage\HomePage.css" />
+    <Content Include="PageContent\HomePage\HomePage.js" />
+    <Content Include="PageContent\Site.Master.css" />
+    <Content Include="PageContent\Site.Master.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Miscellaneous\Constants.cs" />
+    <Compile Include="PageContent\ContactPage\ContactPage.aspx.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageContent\ContactPage\ContactPage.aspx.designer.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageContent\PricesPage\PricesPage.aspx.cs">
+      <DependentUpon>PricesPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageContent\PricesPage\PricesPage.aspx.designer.cs">
+      <DependentUpon>PricesPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageContent\AboutPage\AboutPage.aspx.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageContent\AboutPage\AboutPage.aspx.designer.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageContent\HomePage\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageContent\HomePage\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageContent\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageContent\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\HomePage\HomePage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomePage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Site.Master.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Site.Master.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="PageContent\Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\HomePage\HomePage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomePage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Site.Master.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Site.Master.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
